@@ -1,6 +1,7 @@
 package com.wakaleo.gameoflife.domain;
 
 public enum Cell {
+    //A quick comment for Jenkins poll test	
     LIVE_CELL("*"), DEAD_CELL(".");
 
     private String symbol;
