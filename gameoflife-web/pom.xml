@@ -11,43 +11,6 @@
     <packaging>war</packaging>
     <name>gameoflife-web</name>
 
-
-    <!-- cargo plugin setup -->
-    <plugins>
-    <plugin>
-    <groupId>org.codehaus.cargo</groupId>
-    <artifactId>cargo-maven2-plugin</artifactId>
-
-    <configuration>	
-	<container>
-		<containerId>tomcat8x</containerId>
-		<zipUrlInstaller>
-		    <url>http://repo1.maven.org/maven2/org/apache/tomcat/tomcat/8.0.33/tomcat-8.0.33.zip</url>
-		    <downloadDir>${project.build.directory}/downloads</downloadDir>
-		    <extractDir>${project.build.directory}/extracts</extractDir>
-		</zipUrlInstaller>
-	</container>
-
-
-	<configuration>
-	   <type>existing</type>
-	   <properties></properties>
-	</configuration>
-
-	<!-- Deployables configuration -->
-	<deployables>
-	     <deployable>
-		     <groupId>com.wakaleo.gameoflife</groupId>
-		     <artifactId>gameoflife-web</artifactId>
-		     <packaging>war</packaging>
-	     </deployable>
-	</deployables>
-     </configuration>
-     
-     </plugin>
-     </plugins>
-     <!-- end of cargo plugin setup -->
-
     <properties>
         <jetty.port>9090</jetty.port>
         <jetty.stop.port>9999</jetty.stop.port>
@@ -62,6 +25,41 @@
             </resource>
         </resources>
         <plugins>
+        
+          <!-- cargo plugin setup -->
+          <plugin>
+            <groupId>org.codehaus.cargo</groupId>
+            <artifactId>cargo-maven2-plugin</artifactId>
+
+            <configuration>	
+	            <container>
+		            <containerId>tomcat8x</containerId>
+		            <zipUrlInstaller>
+		              <url>http://repo1.maven.org/maven2/org/apache/tomcat/tomcat/8.0.33/tomcat-8.0.33.zip</url>
+		              <downloadDir>${project.build.directory}/downloads</downloadDir>
+		              <extractDir>${project.build.directory}/extracts</extractDir>
+		            </zipUrlInstaller>
+	            </container>
+
+
+	            <configuration>
+	              <type>existing</type>
+	              <properties></properties>
+	            </configuration>
+
+	            <!-- Deployables configuration -->
+	            <deployables>
+	              <deployable>
+		              <groupId>com.wakaleo.gameoflife</groupId>
+		              <artifactId>gameoflife-web</artifactId>
+		              <packaging>war</packaging>
+	              </deployable>
+	            </deployables>
+            </configuration>
+     
+            </plugin>
+            <!-- end of cargo plugin setup -->
+        
             <plugin>
                 <groupId>org.mortbay.jetty</groupId>
                 <artifactId>jetty-maven-plugin</artifactId>
