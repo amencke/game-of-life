@@ -13,7 +13,6 @@
 
 
     <!-- cargo plugin setup -->
-    <pluginManagement>
     <plugins>
     <plugin>
     <groupId>org.codehaus.cargo</groupId>
@@ -47,7 +46,6 @@
      
      </plugin>
      </plugins>
-     <pluginManagement>
      <!-- end of cargo plugin setup -->
 
     <properties>
