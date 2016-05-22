@@ -51,7 +51,8 @@
 	            <deployables>
 	              <deployable>
 		              <groupId>com.wakaleo.gameoflife</groupId>
-		              <artifactId>gameoflife-web</artifactId>
+			      <artifactId>gameoflife-web</artifactId>
+			      <type>war</type>
 		              <packaging>war</packaging>
 	              </deployable>
 	            </deployables>
