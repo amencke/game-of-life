@@ -21,6 +21,17 @@
         <jelastic.environment>wakaleo</jelastic.environment>
     </properties>
 
+    <distributionManagement>
+	    <repository>
+		    <uniqueVersion>false</uniqueVersion>
+		    <id>artifactory</id>
+		    <name>Local Repository</name>
+		    <url>http://localhost:8081/artifactory</url>
+		    <layout>default</layout>
+	    </repository>
+    </distributionManagement>
+
+
     <scm>
         <connection>scm:git:git@github.com:${github.account}/game-of-life.git</connection>
         <developerConnection>scm:git:git@github.com:${github.account}/game-of-life.git</developerConnection>
